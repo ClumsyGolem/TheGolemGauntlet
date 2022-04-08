@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/UI/Sceens/TitleScreen.gd" type="Script" id=2]
+[ext_resource path="res://src/UI/QuitButton.tscn" type="PackedScene" id=3]
+
+[node name="TitleScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="Button" parent="."]
+margin_left = 64.0
+margin_top = 200.0
+margin_right = 256.0
+margin_bottom = 228.0
+text = "Start Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" parent="." instance=ExtResource( 3 )]
+margin_left = 64.0
+margin_top = 240.0
+margin_right = 256.0
+margin_bottom = 268.0
+
+[connection signal="button_up" from="StartButton" to="." method="_on_StartButton_button_up"]

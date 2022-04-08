@@ -8,8 +8,8 @@ class_name Actor
 # var b: String = "text"
 var totalHP: int
 var currentHP: int
-var attack: int
-var defence: int
+var ATK: int
+var DEF: int
 #var mana: int 
 # maybe waiting a turn restores mana? 
 # Or just a set rate per turn? 

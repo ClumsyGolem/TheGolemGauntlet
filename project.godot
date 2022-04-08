@@ -29,6 +29,10 @@ _global_script_class_icons={
 config/name="The Golem Gauntlet"
 run/main_scene="res://src/Main.tscn"
 
+[autoload]
+
+PlayerData="*res://src/AutoLoad/PlayerData.gd"
+
 [debug]
 
 gdscript/completion/autocomplete_setters_and_getters=true

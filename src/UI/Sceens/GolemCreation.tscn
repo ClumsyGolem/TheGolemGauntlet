@@ -1,0 +1,133 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/UI/Sceens/GolemCreation.gd" type="Script" id=1]
+[ext_resource path="res://src/assets/Runestones-Sheet.png" type="Texture" id=2]
+
+[sub_resource type="InputEventAction" id=1]
+action = "ui_accept"
+
+[sub_resource type="ShortCut" id=2]
+shortcut = SubResource( 1 )
+
+[node name="GolemCreation" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameLabel" type="Label" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 64.0
+margin_top = -176.0
+margin_right = 322.0
+margin_bottom = -162.0
+text = "Name your Golem to give it life:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="."]
+margin_left = 64.0
+margin_top = 296.0
+margin_right = 341.0
+margin_bottom = 320.0
+max_length = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SubmitButton" type="Button" parent="."]
+margin_left = 64.0
+margin_top = 360.0
+margin_right = 155.0
+margin_bottom = 388.0
+shortcut = SubResource( 2 )
+text = "Submit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Runestone1" type="Sprite" parent="." groups=[
+"Runestones",
+]]
+visible = false
+position = Vector2( 96, 224 )
+texture = ExtResource( 2 )
+hframes = 37
+
+[node name="Runestone2" type="Sprite" parent="." groups=[
+"Runestones",
+]]
+visible = false
+position = Vector2( 160, 224 )
+texture = ExtResource( 2 )
+hframes = 37
+
+[node name="Runestone3" type="Sprite" parent="." groups=[
+"Runestones",
+]]
+visible = false
+position = Vector2( 224, 224 )
+texture = ExtResource( 2 )
+hframes = 37
+
+[node name="Runestone4" type="Sprite" parent="." groups=[
+"Runestones",
+]]
+visible = false
+position = Vector2( 288, 224 )
+texture = ExtResource( 2 )
+hframes = 37
+
+[node name="Runestone5" type="Sprite" parent="." groups=[
+"Runestones",
+]]
+visible = false
+position = Vector2( 352, 224 )
+texture = ExtResource( 2 )
+hframes = 37
+
+[node name="Runestone6" type="Sprite" parent="." groups=[
+"Runestones",
+]]
+visible = false
+position = Vector2( 416, 224 )
+texture = ExtResource( 2 )
+hframes = 37
+
+[node name="Runestone7" type="Sprite" parent="." groups=[
+"Runestones",
+]]
+visible = false
+position = Vector2( 480, 224 )
+texture = ExtResource( 2 )
+hframes = 37
+
+[node name="Runestone8" type="Sprite" parent="." groups=[
+"Runestones",
+]]
+visible = false
+position = Vector2( 544, 224 )
+texture = ExtResource( 2 )
+hframes = 37
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+margin_right = 200.0
+margin_bottom = 70.0
+window_title = "Confirm"
+dialog_text = "Continue with this name?"
+
+[connection signal="text_changed" from="LineEdit" to="." method="_on_LineEdit_text_changed"]
+[connection signal="text_entered" from="LineEdit" to="." method="_on_LineEdit_text_entered"]
+[connection signal="pressed" from="SubmitButton" to="." method="_on_SubmitButton_pressed"]
+[connection signal="confirmed" from="ConfirmationDialog" to="." method="_on_ConfirmationDialog_confirmed"]

@@ -1,5 +1,6 @@
 extends Node2D
-var golem = preload("res://src/Golem.tscn") #makes the golem scene available for use.
+
+var golem: PackedScene = preload("res://src/Actors/Golem.tscn") #makes the golem scene available for use.
 
 # Declare member variables here. Examples:
 # var a: int = 2
@@ -21,7 +22,7 @@ func GenerateGolem(golemName) -> void:
 	newGolem.init(golemName) #initialize randomized stats
 
 
-#LISTENERS
+#------------LISTENERS----------------
 
 #listener for the generate_golem signal
 func _on_GolemCreation_generate_golem(golemName) -> void:
